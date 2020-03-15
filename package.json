@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon Router.js",
+    "runservice": "sudo mongod --replSet 'rs0' --port 27018 --dbpath /home/rejoice/mongoReplica/ --bind_ip_all",
+    "addmemberfromprimary": "rs.add( { host: '2.2.2.2:27018', priority: 0, votes: 0 } )",
+    "removemember": "rs.remove('2.2.2.2:27018')",
+    "runmongo": "mongo --port 27018"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2",
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "ejs": "^3.0.1",
+    "express": "^4.16.4",
+    "firebase": "^7.5.0",
+    "firebase-admin": "^8.9.2",
+    "mongodb": "^3.2.3",
+    "nodemon": "^2.0.2",
+    "react-redux": "^7.2.0",
+    "socket.io": "^2.3.0"
+  }
+}

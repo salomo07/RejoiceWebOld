@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Rejoice System - Chat</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/react.production.min.js"></script>
+        <script src="js/react-dom.production.min.js"></script>
+        <script src="js/babel.min.js"></script>
+        <script src="js/firebase-app.js"></script>
+        <script src="js/firebase-messaging.js"></script>
+        <script src="/firebaseInit.js"></script>
+
+        <script src="js/miniscroll.min.js"></script>
+        <script type="text/babel" type="module" src="allreactjs.js"></script>
+        <script src="js/script.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.min.css">
+        <link rel="stylesheet" href="/css/miniscroll.min.css" />
+        <script type="text/javascript" src="js/jquery.mCustomScrollbar.min.js"></script>
+        <script src="js/script.js"></script>
+
+        
+    </head>
+    <body>
+        <input type="hidden" id="nameUser" value="<%= dataUser.username %>">
+        <input type="hidden" id="idUser" value="<%= dataUser._id %>">
+        <input type="hidden" id="imgUser" value="<%= dataUser.profile.foto %>">
+        <div class="container-fluid h-100">
+            <div class="row justify-content-center h-100">
+                <div class="col-md-4 col-xl-3 chat"><div class="card mb-sm-3 mb-md-0 contacts_card">
+                    <div id="cardheader" class="card-header">
+                    </div>
+                    <div class="card-body contacts_body">
+                        <ui class="contacts" id="friendlist">
+                            <li class="">
+                                <div class="d-flex bd-highlight">
+                                    <div class="img_cont">
+                                        <img src="/images/guest.png" class="rounded-circle user_img">
+                                        <span class="online_icon"></span>
+                                    </div>
+                                    <div class="user_info">
+                                        <span>Hamba Allah</span>
+                                        <p>Hamba Allah is online</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ui>
+                    </div>
+                    <div class="card-footer"></div>
+                </div></div>
+                <div class="col-md-8 col-xl-6 chat" id="detailChat">
+                    <div class="card">
+                    </div>
+                    <div id="like_button_container"></div>
+                </div>
+                <div>
+                    <a type="button" href="/signout?id=<%= dataUser._id %>">Signout</a>
+                </div>
+            </div>
+        </div>
+        <a href="/signout?id=<%= dataUser._id %>">Signout</a>
+    </body>
+</html>
