@@ -1,6 +1,6 @@
 var appDesc =require("./appDesc.js").appDesc;
-var url = appDesc.urldb;
-var dbName =appDesc.dbName;
+var url = appDesc.urldb2;
+var dbName =appDesc.dbName2;
 var MongoClient = require('mongodb').MongoClient;
 
 class Mongo {
